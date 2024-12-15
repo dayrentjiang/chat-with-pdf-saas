@@ -16,38 +16,38 @@ const features = [
   {
     name: "Store your PDF Documents",
     description:
-      "Upload your PDF documents and store them securely in the cloud.",
+      "Keep all your important PDF files securely stored and easily accessible anytime, anywhere",
     icon: GlobeIcon
   },
   {
     name: "Store your PDF Documents",
     description:
-      "Upload your PDF documents and store them securely in the cloud.",
+      "Experience lightning-fast answers to your queries, ensuring you get the information you need in seconds",
+    icon: ZapIcon
+  },
+  {
+    name: "Store your PDF Documents",
+    description:
+      "Our intelligent chatbot remembers previous interactions, providing a seamless and personalized experience",
     icon: BrainCogIcon
   },
   {
     name: "Store your PDF Documents",
     description:
-      "Upload your PDF documents and store them securely in the cloud.",
+      "Engage with your PDFs like never before using our intuitive and interactive viewer.",
     icon: EyeIcon
   },
   {
     name: "Store your PDF Documents",
     description:
-      "Upload your PDF documents and store them securely in the cloud.",
-    icon: MonitorSmartphoneIcon
-  },
-  {
-    name: "Store your PDF Documents",
-    description:
-      "Upload your PDF documents and store them securely in the cloud.",
+      "Rest assured knowing your documents are safely backed up on the cloud, protected from loss or damage.",
     icon: ServerCogIcon
   },
   {
     name: "Store your PDF Documents",
     description:
-      "Upload your PDF documents and store them securely in the cloud.",
-    icon: ZapIcon
+      "Access and chat with your PDFs seamlessly across all your devices, ensuring you never miss a beat.",
+    icon: MonitorSmartphoneIcon
   }
 ];
 
@@ -102,10 +102,10 @@ export default function Home() {
                 <dt className="inline font-semibold text-gray-900">
                   <feature.icon
                     aria-hidden="true"
-                    className="absoulte left-1 top-1 h-5 w-5 text-indigo-600"
+                    className="absolute left-1 top-1 h-5 w-5 text-indigo-600"
                   />
                 </dt>
-                <dd>{feature.name}</dd>
+                <dd>{feature.description}</dd>
               </div>
             ))}
           </dl>
