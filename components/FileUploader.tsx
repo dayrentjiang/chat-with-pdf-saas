@@ -11,26 +11,13 @@ import {
 } from "lucide-react";
 
 function FileUploader() {
-  const { progress, status, fileId, handleUpload } = useUpload();
-
-  const onDrop = useCallback(async (acceptedFiles: File[]) => {
+  const onDrop = useCallback((acceptedFiles: File[]) => {
     // Do something with the files
-    //we wil work here
-    const file = acceptedFiles[0];
-    if (file) {
-      await handleUpload(file);
-    } else {
-      //do nothing
-      //toast
-    }
+    console.log(acceptedFiles);
   }, []);
   const { getRootProps, getInputProps, isDragActive, isFocused, isDragAccept } =
     useDropzone({
-      onDrop,
-      maxFiles: 1,
-      accept: {
-        "application/pdf": [".pdf"]
-      }
+      onDrop
     });
   return (
     <div className="flex flex-col gap-4 items-center max-w-7xl mx-auto">
