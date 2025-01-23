@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
+import { generateEmbeddings } from "@/actions/generateEmbeddings";
 
 //setting up an enum in order to have a fixed set of values
 export enum StatusText {
@@ -71,6 +72,7 @@ export function useUpload() {
 
         //generate the AI embedding
         setStatus(StatusText.GENERATING);
+        await generateEmbeddings(fileIdToUploadTo);
         setFileId(fileIdToUploadTo);
       }
     );
